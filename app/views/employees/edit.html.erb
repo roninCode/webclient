@@ -1,0 +1,11 @@
+<%= form_tag "/employees/#{@employee.id}", method: :patch do %>
+  <p>Name: <input type="text" name="name" value="<%= @employee['name'] %>"></p>
+  <p>Age: <input type="text" name="age" value="<%= @employee['age'] %>"></p>
+  <p>Hobbies: <input type="text" name="hobbies" value="<%= @employee['hobbies'] %>"></p>
+  <p><input type="submit" value="Edit this employee!"></p>
+<% end %>
+
+<%= form_tag "/employees/#{@employee['id']}", method: :delete do %>
+  <input type="submit" value="DESTROY ME!">
+  
+<% end %>
